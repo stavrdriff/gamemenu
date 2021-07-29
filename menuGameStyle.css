@@ -1,0 +1,110 @@
+.menu__container {
+   display: flex;
+   position: absolute;
+   width: calc(100% - 2vw);
+   top: 10vh;
+   left: 2vw;
+}
+.buttons__wrap {
+   padding: 5px;
+   border-radius: 10px;
+   background: #fff;
+   display: flex;
+   flex-direction: column;
+   align-self: baseline;
+   box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.2);
+}
+
+.menu__button {
+   border: none;
+   background: #fff;
+   width: 45px;
+   height: 45px;
+   overflow: hidden;
+   cursor: pointer;
+   padding: 0;
+   margin: 3px;
+   border-radius: 5px;
+   transition: 0.3s;
+}
+
+.menu__button-active {
+   box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.3);
+   background: rgba(0, 0, 0, 0.13);
+}
+
+.menu__img {
+   width: 100%;
+   height: 100%;
+   object-position: center;
+   object-fit: contain;
+}
+.line {
+   width: 100%;
+   height: 1px;
+   background: #29abe2;
+   margin: 3px 0;
+}
+.menu__wrap {
+   display: flex;
+   flex-direction: column;
+}
+.displayNone {
+   display: none;
+}
+.posDown {
+   position: fixed;
+   top: unset;
+   bottom: 1vh;
+}
+.gameModalWindow {
+   background: #fff;
+   width: 600px;
+   margin: 0 3px;
+   box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.2);
+   border-radius: 10px;
+   padding: 10px;
+   position: relative;
+}
+@media (max-width: 688px) {
+   .gameModalWindow {
+      width: 90%;
+   }
+}
+.iframeGamesMenu {
+   width: 100%;
+   height: calc(100% - 50px);
+}
+.modal__title {
+   font-family: sans-serif;
+   text-align: center;
+   text-transform: uppercase;
+   margin: 10px 0;
+}
+
+.modal__btn-close {
+   width: 38px;
+   height: 38px;
+   font-size: 25px;
+   border-radius: 5px;
+   border: none;
+   cursor: pointer;
+   box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.3);
+   position: absolute;
+   top: 3%;
+   right: 2%;
+   margin: 0;
+   transition: 0.3s;
+   line-height: 0;
+   background: rgba(0, 0, 0, 0.13);
+}
+@media (hover) {
+   .modal__btn-close:hover {
+      transform: scale(1.1);
+   }
+   .menu__button:hover {
+      box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.3);
+      transform: scale(1.2);
+      background: rgba(0, 0, 0, 0.13);
+   }
+}

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="menuGameStyle.css">
+   <title>Document</title>
+</head>
+
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <div class="menu__container">
+      <div id="buttons__wrap" class="buttons__wrap">
+         <div id="menu__wrap" class="menu__wrap">
+            <a href="https://mygameset.com/" class="menu__button delete" title="На главную">
+               <img class="menu__img" src="https://mygameset.com/images/Home.png" alt="">
+            </a>
+            <div class="line"></div>
+            <button id="infoGamesButton" data-id="infoGamesModal" class="menu__button forJS menu__button-active"
+               title="Информация">
+               <img class="menu__img" src="https://mygameset.com/images/game.png" alt="">
+            </button>
+            <button id="commentButton" data-id="commentModal" class="menu__button forJS" title="Комментарии">
+               <img class="menu__img" src="https://mygameset.com/images/comments.png" alt="">
+            </button>
+            <button id="popupButton" data-id="popupModal" class="menu__button forJS" title="Дополнительная информация">
+               <img class="menu__img" src="https://mygameset.com/images/info.png" alt="">
+            </button>
+            <button id="videoButton" data-id="videoModal" class="menu__button forJS" title="Видео">
+               <img class="menu__img" src="https://mygameset.com/images/video.png" alt="">
+            </button>
+            <button id="donateButton" data-id="donateModal" class="menu__button forJS" title="Поддержать проект">
+               <img class="menu__img" src="https://mygameset.com/images/donat.png" alt="">
+            </button>
+            <div class="line"></div>
+         </div>
+         <button id="closeButton" class="menu__button delete" title="Меню">
+            <img id="closeImg" class="menu__img" src="https://mygameset.com/images/closed.png" alt="">
+            <img id="openImg" class="menu__img displayNone" src="https://mygameset.com/images/mygameset.png" alt="">
+         </button>
+      </div>
+      <div id="infoGamesModal" class="gameModalWindow">
+         <button class="modal__btn-close" title="Закрыть">&#10006;</button>
+         <div class="modal__header">
+            <h2 class="modal__title">Информация</h2>
+         </div>
+         <iframe class="iframeGamesMenu" frameborder="0" src="https://soulraise.github.io/avana/avana/"></iframe>
+      </div>
+      <div id="commentModal" class="gameModalWindow displayNone">
+         <button class="modal__btn-close" title="Закрыть">&#10006;</button>
+         <div class="modal__header">
+            <h2 class="modal__title">Комментарии</h2>
+         </div>
+         <iframe class="iframeGamesMenu" frameborder="0" src="https://soulraise.github.io/avana/avana/"></iframe>
+      </div>
+      <div id="popupModal" class="gameModalWindow displayNone">
+         <button class="modal__btn-close" title="Закрыть">&#10006;</button>
+         <div class="modal__header">
+            <h2 class="modal__title">Дополнительная информация</h2>
+         </div>
+         <iframe class="iframeGamesMenu" frameborder="0" src="https://soulraise.github.io/avana/avana/"></iframe>
+      </div>
+      <div id="videoModal" class="gameModalWindow displayNone">
+         <button class="modal__btn-close" title="Закрыть">&#10006;</button>
+         <div class="modal__header">
+            <h2 class="modal__title">Видео</h2>
+         </div>
+         <iframe class="iframeGamesMenu" frameborder="0" src=""></iframe>
+      </div>
+      <div id="donateModal" class="gameModalWindow displayNone">
+         <button class="modal__btn-close" title="Закрыть">&#10006;</button>
+         <div class="modal__header">
+            <h2 class="modal__title">Поддержать проект</h2>
+         </div>
+         <iframe class="iframeGamesMenu" frameborder="0" src="https://soulraise.github.io/avana/avana/"></iframe>
+      </div>
+   </div>
+   <script>
+      if (document.documentElement.clientWidth <= 1366) {
+         document.getElementById('menu__wrap').classList.add('displayNone');
+         document.getElementById('buttons__wrap').classList.add('posDown');
+         document.getElementById('closeImg').classList.add('displayNone');
+         document.getElementById('openImg').classList.remove('displayNone');
+         let modals = document.querySelectorAll('.gameModalWindow');
+         let buttons = document.querySelectorAll('.forJS');
+         for (let modal of modals) {
+            modal.classList.add('displayNone');
+         }
+         for (let button of buttons) {
+            button.classList.remove('menu__button-active');
+         }
+      }
+      document.getElementById('closeButton').addEventListener('click', function () {
+         document.getElementById('menu__wrap').classList.toggle('displayNone');
+         document.getElementById('buttons__wrap').classList.toggle('posDown');
+         document.getElementById('closeImg').classList.toggle('displayNone');
+         document.getElementById('openImg').classList.toggle('displayNone');
+         let modals = document.querySelectorAll('.gameModalWindow');
+         let buttons = document.querySelectorAll('.forJS');
+         for (let modal of modals) {
+            modal.classList.add('displayNone');
+         }
+         for (let button of buttons) {
+            button.classList.remove('menu__button-active');
+         }
+      })
+      function getOpenModal(id) {
+         let modals = document.querySelectorAll('.gameModalWindow');
+         let buttons = document.querySelectorAll('.forJS');
+         for (let modal of modals) {
+            modal.classList.add('displayNone');
+         }
+         for (let button of buttons) {
+            button.classList.remove('menu__button-active');
+            if (button.getAttribute('data-id') == id) {
+               button.classList.add('menu__button-active');
+            }
+         }
+         document.getElementById(id).classList.remove('displayNone');
+      }
+      let buttons = document.querySelectorAll('.forJS');
+      for (let button of buttons) {
+         button.addEventListener('click', function () {
+            getOpenModal(button.getAttribute('data-id'))
+         })
+      }
+      let deleteActive = document.querySelectorAll('.delete');
+      for (let dels of deleteActive) {
+         dels.classList.remove('menu__button-active')
+      }
+      let closes = document.querySelectorAll('.modal__btn-close');
+      for (let close of closes) {
+         close.addEventListener('click', function () {
+            getCloseModal();
+         })
+      }
+      function getCloseModal() {
+         let modals = document.querySelectorAll('.gameModalWindow');
+         for (let modal of modals) {
+            modal.classList.add('displayNone');
+         }
+         let deleteActive = document.querySelectorAll('.menu__button');
+         for (let dels of deleteActive) {
+            dels.classList.remove('menu__button-active')
+         }
+      }
+   </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
