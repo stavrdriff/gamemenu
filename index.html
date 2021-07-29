@@ -1,101 +1,88 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="menuGameStyle.css">
-   <title>Document</title>
+   <title>menuGames</title>
 </head>
 
 <body>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
    <div class="menu__container">
       <div id="buttons__wrap" class="buttons__wrap">
          <div id="menu__wrap" class="menu__wrap">
             <a href="https://mygameset.com/" class="menu__button delete" title="На главную">
-               <img class="menu__img" src="https://mygameset.com/images/Home.png" alt="">
+               <img class="menu__img" src="https://mygameset.com/wp-content/uploads/2021/07/Home.png" alt=""
+                  title="На главную">
             </a>
             <div class="line"></div>
             <button id="infoGamesButton" data-id="infoGamesModal" class="menu__button forJS menu__button-active"
                title="Информация">
-               <img class="menu__img" src="https://mygameset.com/images/game.png" alt="">
+               <img class="menu__img" src="https://mygameset.com/wp-content/uploads/2021/07/game.png" alt=""
+                  title="Информация">
             </button>
             <button id="commentButton" data-id="commentModal" class="menu__button forJS" title="Комментарии">
-               <img class="menu__img" src="https://mygameset.com/images/comments.png" alt="">
+               <img class="menu__img" src="https://mygameset.com/wp-content/uploads/2021/07/comments.png" alt=""
+                  title="Комментарии">
             </button>
-            <button id="popupButton" data-id="popupModal" class="menu__button forJS" title="Дополнительная информация">
-               <img class="menu__img" src="https://mygameset.com/images/info.png" alt="">
+            <button id="popupButton" data-id="popupModal" class="menu__button forJS" title="Вопросы и Ответы">
+               <img class="menu__img" src="https://mygameset.com/wp-content/uploads/2021/07/info.png" alt=""
+                  title="Вопросы и Ответы">
             </button>
             <button id="videoButton" data-id="videoModal" class="menu__button forJS" title="Видео">
-               <img class="menu__img" src="https://mygameset.com/images/video.png" alt="">
+               <img class="menu__img" src="https://mygameset.com/wp-content/uploads/2021/07/video.png" alt=""
+                  title="Видео">
             </button>
             <button id="donateButton" data-id="donateModal" class="menu__button forJS" title="Поддержать проект">
-               <img class="menu__img" src="https://mygameset.com/images/donat.png" alt="">
+               <img class="menu__img" src="https://mygameset.com/wp-content/uploads/2021/07/donat.png" alt=""
+                  title="Поддержать проект">
             </button>
             <div class="line"></div>
          </div>
          <button id="closeButton" class="menu__button delete" title="Меню">
-            <img id="closeImg" class="menu__img" src="https://mygameset.com/images/closed.png" alt="">
-            <img id="openImg" class="menu__img displayNone" src="https://mygameset.com/images/mygameset.png" alt="">
+            <img id="closeImg" class="menu__img" src="https://mygameset.com/wp-content/uploads/2021/07/closed.png"
+               alt="" title="Свернуть меню">
+            <img id="openImg" class="menu__img displayNone"
+               src="https://mygameset.com/wp-content/uploads/2021/07/mygameset.png" alt="" title="Открыть меню">
          </button>
       </div>
       <div id="infoGamesModal" class="gameModalWindow">
-         <button class="modal__btn-close" title="Закрыть">&#10006;</button>
          <div class="modal__header">
             <h2 class="modal__title">Информация</h2>
+            <button class="modal__btn-close" title="Закрыть">&#10006;</button>
          </div>
          <iframe class="iframeGamesMenu" frameborder="0" src="https://soulraise.github.io/avana/avana/"></iframe>
       </div>
-      <div id="commentModal" class="gameModalWindow displayNone">
-         <button class="modal__btn-close" title="Закрыть">&#10006;</button>
+      <div id="commentModal" class="gameModalWindow displayNone height">
          <div class="modal__header">
             <h2 class="modal__title">Комментарии</h2>
+            <button class="modal__btn-close" title="Закрыть">&#10006;</button>
          </div>
-         <iframe class="iframeGamesMenu" frameborder="0" src="https://soulraise.github.io/avana/avana/"></iframe>
+         [anycomment]
       </div>
       <div id="popupModal" class="gameModalWindow displayNone">
-         <button class="modal__btn-close" title="Закрыть">&#10006;</button>
+
          <div class="modal__header">
             <h2 class="modal__title">Дополнительная информация</h2>
+            <button class="modal__btn-close" title="Закрыть">&#10006;</button>
          </div>
          <iframe class="iframeGamesMenu" frameborder="0" src="https://soulraise.github.io/avana/avana/"></iframe>
       </div>
       <div id="videoModal" class="gameModalWindow displayNone">
-         <button class="modal__btn-close" title="Закрыть">&#10006;</button>
+
          <div class="modal__header">
             <h2 class="modal__title">Видео</h2>
+            <button class="modal__btn-close" title="Закрыть">&#10006;</button>
          </div>
          <iframe class="iframeGamesMenu" frameborder="0" src=""></iframe>
       </div>
       <div id="donateModal" class="gameModalWindow displayNone">
-         <button class="modal__btn-close" title="Закрыть">&#10006;</button>
+
          <div class="modal__header">
             <h2 class="modal__title">Поддержать проект</h2>
+            <button class="modal__btn-close" title="Закрыть">&#10006;</button>
          </div>
          <iframe class="iframeGamesMenu" frameborder="0" src="https://soulraise.github.io/avana/avana/"></iframe>
       </div>
@@ -170,42 +157,6 @@
          }
       }
    </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </body>
 
 </html>
