@@ -30,6 +30,7 @@
    }
    .games__linkBtn:hover {
       color: #fff;
+      box-shadow: 0 0 10px 10px rgba(255, 255, 255, 0.7);
    }
 }
 .games__hover {
