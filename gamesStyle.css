@@ -4,12 +4,12 @@
    gap: 1vw;
    grid-template-columns: 1fr 1fr 1fr 1fr;
 }
-@media (max-width: 1023px) {
+@media (max-width: 1365px) {
    .games__container {
       grid-template-columns: 1fr 1fr;
    }
 }
-@media (max-width: 600px) {
+@media (max-width: 1024px) {
    .games__container {
       grid-template-columns: 1fr;
    }
@@ -69,7 +69,8 @@
    text-decoration: none;
    padding: 10px 20px;
    font-family: sans-serif;
-   border: 1px solid #fff;
+   /* border: 1px solid #fff; */
+   box-shadow: 0 0 5px 1px rgba(255, 255, 255, 0.472);
    border-radius: 5px;
    transition: 0.5s;
    font-weight: 600;
