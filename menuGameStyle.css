@@ -1,9 +1,8 @@
 .menu__container {
    display: flex;
    position: absolute;
-   width: calc(100% - 2vw);
    top: 10vh;
-   left: 0;
+   left: 0vw;
 }
 .buttons__wrap {
    padding: 5px;
@@ -37,9 +36,7 @@
    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.3);
    background: rgba(0, 0, 0, 0.13);
 }
-#closeImg {
-   background: rgba(213, 85, 0, 0.5);
-}
+
 .menu__img {
    width: 100%;
    height: 100%;
@@ -75,7 +72,7 @@
 }
 @media (max-width: 688px) {
    .gameModalWindow {
-      width: 90%;
+      width: calc(100vw - 90px);
    }
 }
 .iframeGamesMenu {
@@ -144,6 +141,10 @@
 .height {
    height: calc(730px - 10vh);
    overflow-y: auto;
+}
+
+#closeImg {
+   background: rgba(213, 85, 0, 0.5);
 }
 
 @keyframes jumpButton {
