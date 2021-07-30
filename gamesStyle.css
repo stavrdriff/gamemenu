@@ -34,6 +34,9 @@
    }
 }
 .games__hover {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
    text-align: center;
    color: #fff;
    position: absolute;
@@ -70,7 +73,6 @@
    text-decoration: none;
    padding: 10px 20px;
    font-family: sans-serif;
-   /* border: 1px solid #fff; */
    box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.5);
    border-radius: 5px;
    transition: 0.5s;
@@ -88,4 +90,12 @@
    height: 100%;
    object-fit: contain;
    object-position: center;
+}
+
+.games__linkBtn-active {
+   bottom: 5%;
+}
+.games__hover-active {
+   transform: scale(1);
+   opacity: 1;
 }
