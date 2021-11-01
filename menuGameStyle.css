@@ -2,7 +2,7 @@
    display: flex;
    position: absolute;
    top: 10vh;
-   left: 0vw;
+   right: 1vw;
 }
 .buttons__wrap {
    padding: 5px;
@@ -13,7 +13,6 @@
    align-self: baseline;
    box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.2);
 }
-
 .menu__button {
    border: none;
    background: #fff;
@@ -60,6 +59,7 @@
    position: fixed;
    top: unset;
    bottom: 1vh;
+   right: 1vw;
    animation: jumpButton 5s linear 2s infinite;
 }
 .gameModalWindow {
@@ -69,6 +69,21 @@
    box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.2);
    border-radius: 10px;
    padding: 0 10px 10px 10px;
+   overflow-y: auto;
+}
+::-webkit-scrollbar {
+   width: 12px;
+   border-radius: 5px;
+   background-color: rgba(74, 118, 168, 0.1);
+}
+::-webkit-scrollbar-thumb {
+   background-color: rgba(74, 118, 168, 0.5);
+   border-radius: 5px;
+}
+html,
+body {
+   scrollbar-color: rgba(74, 118, 168, 0.5) rgba(74, 118, 168, 0.1);
+   scrollbar-width: 12px;
 }
 @media (max-width: 688px) {
    .gameModalWindow {
@@ -126,21 +141,9 @@
    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.3);
    outline: none;
 }
-@media (hover) {
-   .modal__btn-close:hover {
-      transform: scale(1.1);
-      background: rgba(0, 0, 0, 0.13);
-      color: #000;
-   }
-   .menu__button:hover {
-      box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.3);
-      transform: scale(1.2);
-      background: rgba(0, 0, 0, 0.13);
-   }
-}
+
 .height {
-   height: calc(730px - 10vh);
-   overflow-y: auto;
+   height: 86vh;
 }
 
 #closeImg {
@@ -171,5 +174,97 @@
    }
    100% {
       bottom: 1vh;
+   }
+}
+
+
+.modal-sales {
+   position: fixed;
+   bottom: 3vh;
+   left: 3vw;
+   width: 40vw;
+   max-width: 540px;
+   border-radius: 10px;
+   box-shadow: 0 0 15px 2px rgb(0 0 0 / 20%);
+   padding: 0 10px 10px 10px;
+   color: #4A76A8;
+   background: #fff;
+}
+
+.modal-sales__header {
+   position: relative;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   position: sticky;
+   padding: 10px 0;
+   top: 0;
+   background: #fff;
+   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+   z-index: 1000;
+}
+
+.modal-sales__title {
+   font-family: sans-serif;
+   text-align: center;
+   text-transform: uppercase;
+   margin: 10px auto;
+   font-size: 18px;
+   font-weight: 600;
+}
+
+.modal-sales__btn-close {
+   position: absolute;
+   right: 5px;
+   bottom: 50%;
+   margin-bottom: -16px;
+   width: 38px;
+   height: 38px;
+   font-size: 25px;
+   border-radius: 5px;
+   border: none;
+   cursor: pointer !important;
+   box-shadow: 0 0 5px 2px rgb(0 0 0 / 30%);
+   transition: 0.3s;
+   line-height: 0;
+   background: rgba(0, 0, 0, 0.13);
+   color: inherit;
+   padding: 0;
+}
+
+.modal-sales__content {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.modal-sales__text {
+   text-align: center;
+}
+
+.modal-sales__text a {
+   font-weight: bold;
+}
+
+.modal-sales__text:not(:first-child) {
+   margin-top: 0;
+}
+
+.modal-sales__image-container img {
+   width: 100%;
+   height: 100%;
+}
+
+@media (hover) {
+   .modal-sales__btn-close:hover,
+   .modal__btn-close:hover {
+      transform: scale(1.1);
+      background: rgba(0, 0, 0, 0.13);
+      color: #000;
+   }
+   .menu__button:hover {
+      box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.3);
+      transform: scale(1.2);
+      background: rgba(0, 0, 0, 0.13);
    }
 }

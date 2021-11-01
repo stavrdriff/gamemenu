@@ -33,6 +33,19 @@
       box-shadow: 0 0 10px 10px rgba(255, 255, 255, 0.7);
    }
 }
+@media (max-width: 1024px) {
+   .games__item:hover .games__hover {
+      transform: scale(1);
+      opacity: 1;
+   }
+   .games__item:hover .games__linkBtn {
+      bottom: 5%;
+   }
+   .games__linkBtn:hover {
+      color: #fff;
+      box-shadow: 0 0 10px 10px rgba(255, 255, 255, 0.7);
+   }
+}
 .games__hover {
    display: flex;
    flex-direction: column;
@@ -98,4 +111,7 @@
 .games__hover-active {
    transform: scale(1);
    opacity: 1;
+}
+.elementor-column-gap-default > .elementor-row > .elementor-column > .elementor-element-populated {
+   padding: 0;
 }

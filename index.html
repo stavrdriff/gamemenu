@@ -10,44 +10,30 @@
 </head>
 
 <body>
-   <div class="menu__container">
-      <div id="buttons__wrap" class="buttons__wrap">
-         <div id="menu__wrap" class="menu__wrap">
-            <a href="https://mygameset.com/" class="menu__button delete" title="На главную">
-               <img class="menu__img" src="https://mygameset.com/wp-content/uploads/2021/07/Home.png" alt=""
-                  title="На главную">
-            </a>
-            <div class="line"></div>
-            <button id="infoGamesButton" data-id="infoGamesModal" class="menu__button forJS menu__button-active"
-               title="Информация">
-               <img class="menu__img" src="https://mygameset.com/wp-content/uploads/2021/07/game.png" alt=""
-                  title="Информация">
-            </button>
-            <button id="commentButton" data-id="commentModal" class="menu__button forJS" title="Комментарии">
-               <img class="menu__img" src="https://mygameset.com/wp-content/uploads/2021/07/comments.png" alt=""
-                  title="Комментарии">
-            </button>
-            <button id="popupButton" data-id="popupModal" class="menu__button forJS" title="Вопросы и Ответы">
-               <img class="menu__img" src="https://mygameset.com/wp-content/uploads/2021/07/info.png" alt=""
-                  title="Вопросы и Ответы">
-            </button>
-            <button id="videoButton" data-id="videoModal" class="menu__button forJS" title="Видео">
-               <img class="menu__img" src="https://mygameset.com/wp-content/uploads/2021/07/video.png" alt=""
-                  title="Видео">
-            </button>
-            <button id="donateButton" data-id="donateModal" class="menu__button forJS" title="Поддержать проект">
-               <img class="menu__img" src="https://mygameset.com/wp-content/uploads/2021/07/donat.png" alt=""
-                  title="Поддержать проект">
-            </button>
-            <div class="line"></div>
-         </div>
-         <button id="closeButton" class="menu__button delete" title="Меню">
-            <img id="closeImg" class="menu__img" src="https://mygameset.com/wp-content/uploads/2021/07/closed.png"
-               alt="" title="Свернуть меню">
-            <img id="openImg" class="menu__img displayNone"
-               src="https://mygameset.com/wp-content/uploads/2021/07/mygameset.png" alt="" title="Открыть меню">
-         </button>
+   <div class="modal-sales">
+      <div class="modal-sales__header">
+         <h2 class="modal-sales__title">Информация adsfsdsf sdfsdf</h2>
+         <button class="modal-sales__btn-close" title="Закрыть">&#10006;</button>
       </div>
+      <div class="modal-sales__content">
+         <p class="modal-sales__text">From 22nd - <a href="#">23rd October</a>, get + 190% with each purchase of rubies!<br>From 22nd - 23rd October, get + 190% with each purchase of rubies!</p>
+         <div class="modal-sales__image-container">
+            <img src="https://mygameset.com/wp-content/uploads/2021/10/526x526_KDK_Sale.jpg"/>
+         </div>
+      </div>
+   </div>
+
+   <script>
+      document.querySelector('.modal-sales__btn-close').addEventListener('click', function () {
+         document.querySelector('.modal-sales').classList.add('displayNone');
+      })
+      if (document.documentElement.clientWidth <= 1280) {
+         document.querySelector('.modal-sales').classList.add('displayNone');
+      }
+   </script>
+
+
+   <div class="menu__container">
       <div id="infoGamesModal" class="gameModalWindow">
          <div class="modal__header">
             <h2 class="modal__title">Информация</h2>
@@ -86,9 +72,48 @@
          </div>
          <iframe class="iframeGamesMenu" frameborder="0" src="https://soulraise.github.io/avana/avana/"></iframe>
       </div>
+      <div id="buttons__wrap" class="buttons__wrap">
+         <div id="menu__wrap" class="menu__wrap">
+            <a href="https://mygameset.com/" class="menu__button delete" title="На главную">
+               <img class="menu__img" src="https://mygameset.com/wp-content/uploads/2021/07/Home.png" alt=""
+                  title="На главную">
+            </a>
+            <div class="line"></div>
+            <button id="infoGamesButton" data-id="infoGamesModal" class="menu__button forJS menu__button-active"
+               title="Информация">
+               <img class="menu__img" src="https://mygameset.com/wp-content/uploads/2021/07/game.png" alt=""
+                  title="Информация">
+            </button>
+            <button id="commentButton" data-id="commentModal" class="menu__button forJS" title="Комментарии">
+               <img class="menu__img" src="https://mygameset.com/wp-content/uploads/2021/07/comments.png" alt=""
+                  title="Комментарии">
+            </button>
+            <button id="popupButton" data-id="popupModal" class="menu__button forJS" title="Вопросы и Ответы">
+               <img class="menu__img" src="https://mygameset.com/wp-content/uploads/2021/07/info.png" alt=""
+                  title="Вопросы и Ответы">
+            </button>
+            <button id="videoButton" data-id="videoModal" class="menu__button forJS" title="Видео">
+               <img class="menu__img" src="https://mygameset.com/wp-content/uploads/2021/07/video.png" alt=""
+                  title="Видео">
+            </button>
+            <button id="donateButton" data-id="donateModal" class="menu__button forJS" title="Поддержать проект">
+               <img class="menu__img" src="https://mygameset.com/wp-content/uploads/2021/07/donat.png" alt=""
+                  title="Поддержать проект">
+            </button>
+            <div class="line"></div>
+         </div>
+         <button id="closeButton" class="menu__button delete" title="Меню">
+            <img id="closeImg" class="menu__img" src="https://mygameset.com/wp-content/uploads/2021/07/closed.png"
+               alt="" title="Свернуть меню">
+            <img id="openImg" class="menu__img displayNone"
+               src="https://mygameset.com/wp-content/uploads/2021/07/mygameset.png" alt="" title="Открыть меню">
+         </button>
+      </div>
+
    </div>
    <script>
-      if (document.documentElement.clientWidth <= 1366) {
+      if (document.documentElement.clientWidth <= 1280) {
+         document.querySelector('.modal-sales').classList.add('displayNone');
          document.getElementById('menu__wrap').classList.add('displayNone');
          document.getElementById('buttons__wrap').classList.add('posDown');
          document.getElementById('closeImg').classList.add('displayNone');
